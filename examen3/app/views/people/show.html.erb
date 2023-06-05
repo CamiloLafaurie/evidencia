@@ -1,0 +1,25 @@
+show: <h1>Datos de persona</h1>
+
+<dl>
+    <dt>Identification</dt>
+    <dd><%= @person.identification %></dd>
+    <dt>First_name</dt>
+    <dd><%= @person.first_name %></dd>
+    <dt>Second_name</dt>
+    <dd><%= @person.second_name %></dd>
+    <dt>First_last_name</dt>
+    <dd><%= @person.first_last_name %></dd>
+    <dt>Second_last_name</dt>
+    <dd><%= @person.second_last_name %></dd>
+    <dt>Document</dt>
+    <dd><%= @person.document.document_type%></dd>
+    <dt>Role</dt>
+    <dd><%= @person.role.role_name %></dd>
+    
+    
+</dl>
+
+<%= link_to "Adicionar persona", people_path, class: "btn btn-primary" %>
+<br>
+</br>
+<%= link_to "Editar personas", edit_person_path(@person), class: "btn btn-primary" %>

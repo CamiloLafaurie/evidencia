@@ -1,0 +1,10 @@
+<tr>
+  <td><%= person.id %></td>
+  <td><%= link_to person.identification, person_path(person) %></td>
+  <td><%= person.first_name %></td>
+  <td><%= person.second_name %></td>
+  <td><%= person.first_last_name %></td>
+  <td><%= person.second_last_name %></td>
+  <td><%= person.document.document_type %></td>
+  <td><%= person.role.role_name %></td>
+</tr>

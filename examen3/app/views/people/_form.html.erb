@@ -1,0 +1,34 @@
+<div class="row">
+  <div class="col-md-7">
+    <%= simple_form_for @person, html: {class: "form-horizontal"} do |f| %>
+      <div class="form-group">
+        <%= f.input :identification, input_html: {class: "form-control"} %>
+      </div>
+
+      <div class="form-group">
+        <%= f.input :first_name, input_html: {class: "form-control"} %>
+      </div>
+
+      <div class="form-group">
+        <%= f.input :second_name, input_html: {class: "form-control"} %>
+      </div>
+
+      <div class="form-group">
+        <%= f.input :first_last_name, input_html: {class: "form-control"} %>
+      </div>
+
+      <div class="form-group">
+        <%= f.input :second_last_name, input_html: {class: "form-control"} %>
+      </div>
+      
+      <%= f.association :document, label_method: :document_type, input_html: {class: "form-control"} %>
+      <%= f.association :role, label_method: :role_name, input_html: {class: "form-control"} %>
+
+
+
+      <div class="form-group">
+        <%= f.button :submit, class: "btn btn-primary" %>
+      </div>
+    <% end %>
+  </div>
+</div>
